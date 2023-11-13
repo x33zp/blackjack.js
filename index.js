@@ -1,15 +1,28 @@
-// Check if the person is elegible for a birthday card from the King! (100)
+let firstCard = 10
+let secondCard = 11
+let sum = firstCard + secondCard
+let hasBlackJack = false
+let isAlive = true
+let message = ""
+let messageEl = document.getElementById("message-el")
+// 2. Store the sum paragraph in a variable called sumEl
+let sumEl = document.getElementById("sum-el")
 
-let age = 100
-
-// if less than 100    -> "Not elegible"
-// else if exactly 100 -> "Here is your birthday card from the King!"
-// else                -> "Not elegible, you have already gotten one"
-
-if (age < 100) {
-    console.log("Not elegible")
-} else if (age === 100) {
-    console.log("Here is your birthday card from the King!")
-} else {
-    console.log("Not elegible, you have already goten one")
+function startGame() {
+    // 3. Render the sum on the page using this format -> "Sum: 14"
+    sumEl.textContent += ` ${sum}`
+    if (sum <= 20) {
+        message = "Do you want to draw a new card? 🙂"
+    } else if (sum === 21) {
+        message = "You've got Blackjack! 🥳"
+        hasBlackJack = true
+    } else {
+        message = "You're out of the game! 😭"
+        isAlive = false
+    }
+    // 2. Display the message in the messageEl using messageEl.textContent
+    messageEl.textContent = message
+    console.log(message)
 }
+
+// startGame()
