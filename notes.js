@@ -207,3 +207,148 @@ console.log(messages)
 // removing the last message of an array
 messages.pop()
 console.log(messages)
+
+///
+// for loop
+// Count to ten!
+
+// We need to specify...
+
+// Where should we START counting?
+// Where is the FINISH line?
+// What's the STEP SIZE we should use?
+
+//    START           FINISH       STEP SIZE
+for (let count = 1; count < 21; count += 1) {
+
+    console.log(count)
+
+}
+
+// Create a for loop that counts from 10 to 100 in steps of 10
+// Use console.log to log out the numbers
+for (let num = 10; num < 101; num += 10) {
+    console.log(num);
+}
+
+// for loops and arrays
+let messages = [
+    "Hey, how's it going?",
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately.",
+    "Same here!",
+    "Great to hear",
+    "🙌🏾"
+]
+
+for (let i = 0; i < messages.length; i += 1) {
+    console.log(messages[i])
+}
+
+//
+let cards = [7, 3, 9]
+
+// Create a for loop that logs out all the cards in the array
+// Use cards.length to specify how long the loop should run
+
+for (let i = 0; i < cards.length; i++) {
+    console.log(cards[i])
+}
+
+///
+//for loops, arrays and DOM
+let sentence = ["Hello", "my", "name", "is", "Per"]
+let greetingEl = document.getElementById("greeting-el")
+
+// Render the sentence in the greetingEl paragraph using a for loop and .textContent
+for (let i = 0; i < sentence.length; i++) {
+    greetingEl.textContent += `${sentence[i]} `
+}
+
+///
+// returning vakues in function
+let player1Time = 102
+let player2Time = 107
+
+function getFastestRaceTime() {
+    if (player1Time < player2Time) {
+        return player1Time
+    } else if (player2Time < player1Time) {
+        return player2Time
+    } else {
+        return player1Time
+    }
+}
+
+let fastestRace = getFastestRaceTime()
+
+console.log(fastestRace)
+
+// Write a function that returns the total race time
+// Call/invoke the function and store the returned value in a new variable
+// Finally, log the variable out
+function getTotalRaceTime() {
+    return player1Time + player2Time
+}
+
+let totalTime = getTotalRaceTime()
+
+console.log(totalTime)
+
+///
+// generating random numbers
+let randomNumber = Math.random() * 6
+
+console.log(randomNumber)
+
+
+/* 
+
+What does Math.random() do?
+
+Your answer: generates a random number from 0 - .9999999
+but when mutiplied with 6, from 0 - 5.999999
+
+*/
+
+// let randomNumber = Math.random() * 6
+
+let flooredNumber = Math.floor(3.45632)
+
+console.log(flooredNumber)
+
+
+/* 
+
+What does Math.floor() do to positive numbers?
+
+Your answer: math floor removes the decimals
+
+*/
+
+let randomNumber = Math.floor(Math.random() * 6)
+
+console.log(randomNumber)
+
+/* 
+
+Write down all the possible values randomNumber can hold now!
+
+now random numbers can hold numbers 0 - 5
+
+*/
+
+// Try to modify the expression so that we get a range from 1 to 6
+let randomNumber = Math.floor(Math.random() * 6) + 1
+
+console.log(randomNumber)
+
+
+// Create a function, rollDice(), that returns a random number between 1 and 6
+
+function rollDice() {
+    let randomNumber = Math.floor(Math.random() * 6) + 1
+    return randomNumber
+}
+
+console.log(rollDice())
